@@ -1,0 +1,95 @@
+\documentclass{article}
+    \usepackage{url}
+    \usepackage{cite}
+    \usepackage{float}   
+    \usepackage{xcolor}
+    \usepackage{lscape}
+    \usepackage{amssymb}
+    \usepackage{titling}
+    \usepackage{pdfpages}
+    \usepackage{enumitem}
+    \usepackage{graphicx}
+    \usepackage{hyperref}
+    \usepackage{fancybox}
+    \usepackage{fancyvrb}
+    \usepackage{enumerate}
+    \usepackage{pdflscape}
+    \usepackage{afterpage}
+    \usepackage{listings,lstautogobble}    
+    \usepackage[margin=0.8in]{geometry}
+    \usepackage[nottoc,notlot,notlof]{tocbibind}
+    \renewcommand\maketitlehookd{\vfill\null}
+    \renewcommand\maketitlehooka{\null\mbox{}\vfill}
+
+    \newcommand\backgroundimage{
+        \put(-5,0){
+        \parbox[b][\paperheight]{\paperwidth}{
+        \vfill
+        \centering
+        \includegraphics[height=\paperheight]{Images/background.jpg}
+        \vfill
+    }}}
+
+    \graphicspath{ {Images/} }
+
+    \title{SENG2260 Assignment 1}
+    \author{
+        Ethan Bentley
+        \texttt{c3130282@uon.edu.au}\\
+        Jasbir Shah
+        \texttt{c3182837@uon.edu.au}\\
+        Jay Rovacsek
+        \texttt{c3146220@uon.edu.au}\\
+        Josh Brown
+        \texttt{c3283797@uon.edu.au}\\
+        Dean Morton
+        \texttt{c3252227@uon.edu.au}\\
+        Tom Milton
+        \texttt{c3261280@uon.edu.au}\\
+        Ryan Lengling
+        \texttt{c3282142@uon.edu.au}\\
+        Elijah Hunt
+        \texttt{c3236563@uon.edu.au}\\
+        Benjamin Walters
+        \texttt{c3207457@uon.edu.au}\\
+    }
+
+    \date{\today}
+    \hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=red,
+    linktoc=section,
+    }
+    \pagenumbering{arabic}
+
+    \newlist{legal}{enumerate}{10}
+    \setlist[legal]{label*=\arabic*.}
+
+    \begin{document}
+    \AddToShipoutPicture{\backgroundimage}
+
+    \begin{titlingpage}
+        \maketitle
+    \end{titlingpage}
+
+    \tableofcontents
+
+    \section{Assignment Outline}
+    \begin{center}
+        \includegraphics[height=\textheight]{Resources/SENG6260_Assignment1_2018.pdf}
+    \end{center}
+
+    \begin{thebibliography}{9}
+        \raggedright
+        \bibitem{Placeholder}
+            Place \url{holder.com}
+    \end{thebibliography}
+
+    \newpage
+    \section{Appendix}
+    \label{sec:Appendix}
+    
+    \end{document}
