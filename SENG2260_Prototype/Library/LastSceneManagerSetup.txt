@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/SENG2260_Scene_v01.unity
+  isLoaded: 1
+  isActive: 1
