@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour {
     private float XOffset { get; set; }
     private float YOffset { get; set; }
     private float ZOffset { get; set; }
+    public bool Visible { get; set; }
 
     // Use this for initialization
     void Start () {
