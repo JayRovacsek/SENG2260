@@ -41,7 +41,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-        private GameObject m_InstantGuiWindow;
 
         // Use this for initialization
         private void Start()
@@ -56,7 +55,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
-            m_InstantGuiWindow = GameObject.FindWithTag("InstantGUI");
         }
 
 
@@ -84,19 +82,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                StopCoroutine("MenuToggle");
-                StartCoroutine("MenuToggle");
+                //m_InstantGuiWindow.SetActive(!m_InstantGuiWindow.activeSelf);
             }
         }
-
-        public void MenuToggle()
-        {
-            m_InstantGuiWindow.SetActive(!m_InstantGuiWindow.activeSelf);
-            yield return new WaitForSeconds((float)0.5);
-        }
-
 
         private void PlayLandingSound()
         {
