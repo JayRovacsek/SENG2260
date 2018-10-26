@@ -64,8 +64,8 @@ public class InstantGuiWindow : InstantGuiElement
 				{
 					absolute.left = Mathf.Max(absolute.left, 0);
 					absolute.top = Mathf.Max(absolute.top, 0);
-					if (absolute.left > Screen.width - sizeX) absolute.left = Screen.width - sizeX;
-					if (absolute.top > Screen.height - sizeY) absolute.top = Screen.height - sizeY;
+					if (absolute.left > UnityEngine.Screen.width - sizeX) absolute.left = UnityEngine.Screen.width - sizeX;
+					if (absolute.top > UnityEngine.Screen.height - sizeY) absolute.top = UnityEngine.Screen.height - sizeY;
 				}
 				
 				if (scape == InstantGuiWindowScape.parent)
@@ -95,7 +95,7 @@ public class InstantGuiWindow : InstantGuiElement
 				if (scape == InstantGuiWindowScape.screen || scape == InstantGuiWindowScape.off)
 				{
 					relative = new InstantGuiElementPos(0, 0, 0, 0);
-					offset = new InstantGuiElementPos(0, Screen.width, 0, Screen.height);
+                    offset = new InstantGuiElementPos(0, UnityEngine.Screen.width, 0, UnityEngine.Screen.height);
 					
 				}
 				
@@ -113,8 +113,8 @@ public class InstantGuiWindow : InstantGuiElement
 			}
 			
 			//re-calc offset on resolution change
-			if (expandButton.check && (scape == InstantGuiWindowScape.screen || scape == InstantGuiWindowScape.off)) 
-				offset = new InstantGuiElementPos(0, Screen.width, 0, Screen.height);
+			if (expandButton.check && (scape == InstantGuiWindowScape.screen || scape == InstantGuiWindowScape.off))
+                offset = new InstantGuiElementPos(0, UnityEngine.Screen.width, 0, UnityEngine.Screen.height);
 		}
 	}
 }

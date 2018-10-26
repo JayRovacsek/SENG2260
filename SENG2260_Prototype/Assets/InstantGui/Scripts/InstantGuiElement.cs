@@ -14,7 +14,7 @@ public class InstantGuiElement : MonoBehaviour
     }
 
     //element position
-    public InstantGuiElementPos parentpos = new InstantGuiElementPos(0, Screen.width, 0, Screen.height);
+    public InstantGuiElementPos parentpos = new InstantGuiElementPos(0, UnityEngine.Screen.width, 0, UnityEngine.Screen.height);
     public InstantGuiElementPos relative = new InstantGuiElementPos(100, 100, 100, 100);
     public InstantGuiElementPos offset = new InstantGuiElementPos(-20, 20, -20, 20);
     public InstantGuiElementPos absolute = new InstantGuiElementPos(-20, 20, -20, 20);
@@ -210,8 +210,8 @@ public class InstantGuiElement : MonoBehaviour
         if (!InstantGuiElementPos.Equals(parentpos, oldParentpos) ||
             !InstantGuiElementPos.Equals(relative, oldRelative) ||
             !InstantGuiElementPos.Equals(offset, oldOffset) ||
-            InstantGui.oldScreenWidth != Screen.width ||
-            InstantGui.oldScreenHeight != Screen.height ||
+            InstantGui.oldScreenWidth != UnityEngine.Screen.width ||
+            InstantGui.oldScreenHeight != UnityEngine.Screen.height ||
             true)
         {
 

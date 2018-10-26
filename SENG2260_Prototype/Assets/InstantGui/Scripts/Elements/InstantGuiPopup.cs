@@ -27,7 +27,7 @@ public class InstantGuiPopup : InstantGuiElement
 					else InvertAlign(list);
 					
 					//changing direction if it is not right
-					if (list.absolute.bottom > Screen.height) InvertAlign(list);
+					if (list.absolute.bottom > UnityEngine.Screen.height) InvertAlign(list);
 					if (list.absolute.top < 0) InvertAlign(list);
 					
 					//aligning this element to prevent flickering

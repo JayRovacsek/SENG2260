@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class VideoPlay : MonoBehaviour {
+public class Screen : MonoBehaviour {
 
     private GameObject VideoPlayer { get; set; }
     private GameObject AudioPlayer { get; set; }

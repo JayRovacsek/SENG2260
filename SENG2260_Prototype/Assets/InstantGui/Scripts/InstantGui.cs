@@ -235,9 +235,9 @@ public class InstantGui : MonoBehaviour
 		UnityEngine.Profiling.Profiler.BeginSample ("Style");	
 		element.ApplyStyle();
 		UnityEngine.Profiling.Profiler.EndSample ();
-		
-		oldScreenWidth = Screen.width;
-		oldScreenHeight = Screen.height;
+
+        oldScreenWidth = UnityEngine.Screen.width;
+        oldScreenHeight = UnityEngine.Screen.height;
 	}
 	
 	//selecting element

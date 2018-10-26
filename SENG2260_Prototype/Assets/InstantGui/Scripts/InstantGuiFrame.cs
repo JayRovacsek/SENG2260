@@ -306,12 +306,12 @@ public class InstantGuiFrame : MonoBehaviour
 		//aligning
 		if (!InstantGui.instance) InstantGui.instance = (InstantGui)FindObjectOfType(typeof(InstantGui));
 		if (!EditorApplication.isPlaying) 
-		{ 
-			//InstantGui.instance.Update();
-			//InstantGui.instance.element.Point(mousePos);
-			
-			InstantGui.width = Screen.width;
-			InstantGui.height = Screen.height;
+		{
+            //InstantGui.instance.Update();
+            //InstantGui.instance.element.Point(mousePos);
+
+            InstantGui.width = UnityEngine.Screen.width;
+            InstantGui.height = UnityEngine.Screen.height;
 			
 			InstantGui.instance.element = InstantGui.instance.GetComponent<InstantGuiElement>();
 			InstantGui.pointed = null;

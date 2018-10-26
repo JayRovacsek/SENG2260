@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuToggle : MonoBehaviour {
+public class Menu : MonoBehaviour {
 
-    public GameObject Menu { get; set; }
+    public GameObject PlayerMenu { get; set; }
 
 	// Use this for initialization
 	void Start () {
-        Menu = GameObject.FindWithTag("Menu");
-        Menu.SetActive(false);
+        PlayerMenu = GameObject.FindWithTag("Menu");
+        PlayerMenu.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            Menu.SetActive(!Menu.activeSelf);
+            PlayerMenu.SetActive(!PlayerMenu.activeSelf);
         }
 	}
 }
