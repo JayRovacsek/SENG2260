@@ -6,6 +6,8 @@ TagManager:
   tags:
   - InstantGUI
   - Menu
+  - Video
+  - Audio
   layers:
   - Default
   - TransparentFX

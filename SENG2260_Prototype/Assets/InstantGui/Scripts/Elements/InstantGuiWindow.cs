@@ -22,15 +22,13 @@ public class InstantGuiWindow : InstantGuiElement
 	
 	private InstantGuiElementPos nonMaximizedRelative;
 	private InstantGuiElementPos nonMaximizedOffset;
-	
+
+    public void Start()
+    {
+    }
+
     public void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            var active = !gameObject.activeSelf;
-
-            gameObject.SetActive(active);
-        }
     }
 	
 	public override void  Action ()
