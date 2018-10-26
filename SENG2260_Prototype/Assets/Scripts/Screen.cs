@@ -78,7 +78,9 @@ public class Screen : MonoBehaviour {
 
     private bool CheckVisibility()
     {
-        var result = (Video.GetComponent<Renderer>().isVisible) ? true : false;
+        var screenVisible = (Video.GetComponent<Renderer>().isVisible) ? true : false;
+        var menuVisible = Menu.activeSelf;
+        var result = (screenVisible && !menuVisible);
         return result;
     }
 }
