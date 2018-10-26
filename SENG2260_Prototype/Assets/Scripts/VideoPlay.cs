@@ -9,6 +9,7 @@ public class VideoPlay : MonoBehaviour {
     private GameObject AudioPlayer { get; set; }
     private GameObject Player { get; set; }
     private bool IsInProximity { get; set; }
+    private bool IsVisible { get; set; }
     private VideoPlayer Video { get; set; }
     private AudioSource Audio { get; set; }
 
@@ -23,6 +24,19 @@ public class VideoPlay : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        IsVisible = CheckVisibility();
+        if (IsVisible)
+        {
+            UpdateVideoStatus();
+        }
+        else
+        {
+            StopPlaying();
+        }
+    }
+
+    private void UpdateVideoStatus()
+    {
         IsInProximity = CheckProximity(Player.transform);
         if (IsInProximity)
         {
@@ -55,6 +69,12 @@ public class VideoPlay : MonoBehaviour {
     private bool CheckProximity(Transform playerTransform)
     {
         var result = (Vector3.Distance(VideoPlayer.transform.position, playerTransform.position) < 7) ? true : false;
+        return result;
+    }
+
+    private bool CheckVisibility()
+    {
+        var result = (Video.GetComponent<Renderer>().isVisible) ? true : false;
         return result;
     }
 }
