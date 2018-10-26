@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -87,6 +88,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (Input.GetKeyDown(KeyCode.E))
             {
                 menu.SetActive(!menu.activeSelf);
+            }
+
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Click();
+            };
+        }
+
+        private void Click()
+        {
+            Ray ray = new Ray(transform.position, transform.forward);
+            RaycastHit hitInfo;
+
+            Physics.Raycast(ray, out hitInfo, 100);
+
+            Button button = hitInfo.collider.GetComponent<Button>();
+            if(button != null)
+            {
+                //button.Click();
             }
         }
 

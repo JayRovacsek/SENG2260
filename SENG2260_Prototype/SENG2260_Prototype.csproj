@@ -254,7 +254,9 @@
     <Compile Include="Assets\InstantGui\Scripts\InstantGuiFrame.cs" />
     <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyle.cs" />
     <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyleSet.cs" />
+    <Compile Include="Assets\Scripts\ExitClick.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\SettingsClick.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
