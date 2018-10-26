@@ -7,6 +7,7 @@ public class VideoPlay : MonoBehaviour {
 
     private GameObject VideoPlayer { get; set; }
     private GameObject AudioPlayer { get; set; }
+    public GameObject Menu { get; set; }
     private GameObject Player { get; set; }
     private bool IsInProximity { get; set; }
     private bool IsVisible { get; set; }
@@ -17,11 +18,12 @@ public class VideoPlay : MonoBehaviour {
 	void Start () {
         VideoPlayer = GameObject.FindWithTag("Video");
         AudioPlayer = GameObject.FindWithTag("Audio");
+        Menu = GameObject.FindWithTag("Menu");
         Player = GameObject.FindWithTag("Player");
         Video = VideoPlayer.GetComponent<VideoPlayer>();
+        Audio = AudioPlayer.GetComponent<AudioSource>();
         Video.isLooping = true;
         Audio.loop = true;
-        Audio = AudioPlayer.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
