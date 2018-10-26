@@ -19,6 +19,7 @@ public class VideoPlay : MonoBehaviour {
         AudioPlayer = GameObject.FindWithTag("Audio");
         Player = GameObject.FindWithTag("Player");
         Video = VideoPlayer.GetComponent<VideoPlayer>();
+        Video.isLooping = true;
         Audio = AudioPlayer.GetComponent<AudioSource>();
     }
 
@@ -31,7 +32,7 @@ public class VideoPlay : MonoBehaviour {
         }
         else
         {
-            StopPlaying();
+            PausePlaying();
         }
     }
 
@@ -49,7 +50,7 @@ public class VideoPlay : MonoBehaviour {
         {
             if (Video.isPlaying)
             {
-                StopPlaying();
+                PausePlaying();
             }
         }
     }
@@ -60,10 +61,10 @@ public class VideoPlay : MonoBehaviour {
         Audio.Play();
     }
 
-    private void StopPlaying()
+    private void PausePlaying()
     {
-        Video.Stop();
-        Audio.Stop();
+        Video.Pause();
+        Audio.Pause();
     }
 
     private bool CheckProximity(Transform playerTransform)
