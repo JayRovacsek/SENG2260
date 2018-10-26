@@ -20,6 +20,7 @@ public class VideoPlay : MonoBehaviour {
         Player = GameObject.FindWithTag("Player");
         Video = VideoPlayer.GetComponent<VideoPlayer>();
         Video.isLooping = true;
+        Audio.loop = true;
         Audio = AudioPlayer.GetComponent<AudioSource>();
     }
 
