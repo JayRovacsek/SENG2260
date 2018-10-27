@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/HoloLibraryScene.unity
+    guid: dcc8dff1bfa517047a33d3b5d447e79f
+  m_configObjects: {}
