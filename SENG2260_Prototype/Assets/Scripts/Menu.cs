@@ -2,50 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Menu : MonoBehaviour {
+public class Menu : MonoBehaviour
+{
+    public Camera anchor;
+    private Transform Transform { get; set; }
+    private Vector2 Velocity { get; set; }
+    public int maxDistance;
+    public int minDistance;
+    public bool visible;
 
-    public GameObject PlayerMenu { get; set; }
-    public IEnumerable<GameObject> PlayerSubmenu { get; set; }
-    public GameObject Player { get; set; }
-    public UnityStandardAssets.Characters.FirstPerson.FirstPersonController FirstPersonController { get; set; }
-    public Camera Camera { get; set; }
-    public bool FreezeCamera { get; set; }
-
-	// Use this for initialization
-	void Start () {
-        PlayerMenu = GameObject.FindWithTag("Menu");
-        PlayerSubmenu = GameObject.FindGameObjectsWithTag("Submenu");
-        Player = GameObject.FindWithTag("Player");
-        FirstPersonController = Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
-        Camera = Player.GetComponent<Camera>();
-        PlayerMenu.SetActive(false);
-        foreach (var Submenu in PlayerSubmenu)
+    // Use this for initialization
+    void Start () {
+        if (anchor == null)
         {
-            Submenu.SetActive(false);
+            anchor = Camera.main;
         }
-        FreezeCamera = false;
+        Transform = gameObject.transform;
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            PlayerMenu.SetActive(!PlayerMenu.activeSelf);
-            foreach (var Submenu in PlayerSubmenu)
-            {
-                Submenu.SetActive(false);
-            }
-        }
+    // FixedUpdate is called once per fixed frame
+    void FixedUpdate () {
+        double distance = Vector3.Distance(Transform.position, Camera.main.transform.position);
+        Vector3 directionVector = (Transform.position - Camera.main.transform.position).normalized;
 
-        if (PlayerMenu.activeSelf)
+        // If the menu is more than maxDistance away place it within minDistance of the anchor
+        if (distance > maxDistance)
         {
-            PlayerIsFrozen(true);
+            // Scalar * direction vector + origin
+            Transform.position = (maxDistance * directionVector) + Camera.main.transform.position;
         }
-        else
+        else if (distance <= minDistance)
         {
-            PlayerIsFrozen(false);
+            // Scalar * direction vector + origin
+            Transform.position = (minDistance * directionVector) + Camera.main.transform.position;
         }
+<<<<<<< HEAD
     }
 
     private void PlayerIsFrozen(bool status)
@@ -65,4 +56,8 @@ public class Menu : MonoBehaviour {
     }
 
 
+=======
+        Transform.LookAt(anchor.transform);
+    }   
+>>>>>>> 22ee2f8449800bad111723cbba66f7cefba6cfc4
 }
