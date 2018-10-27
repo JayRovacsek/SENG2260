@@ -38,6 +38,13 @@ public class Menu : MonoBehaviour {
             }
         }
 
+        /*foreach (var Submenu in PlayerSubmenu) {
+            if (Submenu.activeSelf)
+            {
+                Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.m_cursorIsLocked = false;
+            }
+        }*/
+
         if (PlayerMenu.activeSelf)
         {
             PlayerIsFrozen(true);
