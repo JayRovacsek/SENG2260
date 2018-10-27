@@ -23208,6 +23208,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &1080327552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080327549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 135fcd85edb51eb4080e8caf43b4aa7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1845107510}
 --- !u!1 &1083610244
 GameObject:
   m_ObjectHideFlags: 0
@@ -42320,7 +42333,6 @@ MonoBehaviour:
   anchor: {fileID: 1333318926}
   maxDistance: 2
   minDistance: 1
-  visible: 1
 --- !u!114 &1845107511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47520,7 +47532,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
-  m_menu: {fileID: 1845107505}
+  m_menu: {fileID: 1845107510}
 --- !u!143 &2088033031
 CharacterController:
   m_ObjectHideFlags: 0

@@ -9,7 +9,8 @@ public class Menu : MonoBehaviour
     private Vector2 Velocity { get; set; }
     public int maxDistance;
     public int minDistance;
-    public bool visible;
+    [SerializeField]
+    public bool WearingHoloLens { get; set; }
 
     // Use this for initialization
     void Start () {
@@ -18,6 +19,10 @@ public class Menu : MonoBehaviour
             anchor = Camera.main;
         }
         Transform = gameObject.transform;
+        if (!WearingHoloLens)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // FixedUpdate is called once per fixed frame
@@ -36,6 +41,16 @@ public class Menu : MonoBehaviour
             // Scalar * direction vector + origin
             Transform.position = (minDistance * directionVector) + Camera.main.transform.position;
         }
+    }
+
+    public void SetActive(bool active)
+    {
+        gameObject.SetActive(active && WearingHoloLens);
+    }
+
+    public bool IsActive()
+    {
+        return gameObject.activeSelf;
     }
 
     private void PlayerIsFrozen(bool status)
