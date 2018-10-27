@@ -9,6 +9,10 @@ public class GroupMenuWidget : MenuWidget
     [SerializeField]
     public bool isAdmin;
     [SerializeField]
+    public bool isJoiningGroup;
+    [SerializeField]
+    public bool isInviting;
+    [SerializeField]
     private MenuWidget inGroupWidget;
     [SerializeField]
     private MenuWidget adminGroupWidget;
@@ -56,7 +60,40 @@ public class GroupMenuWidget : MenuWidget
             Close();
             inGroup = true;
             isAdmin = true;
+            SetJoiningGroup(false);
             Open();
         }
+    }
+
+    public void JoinGroup()
+    {
+        if (!inGroup)
+        {
+            Close();
+            inGroup = true;
+            isAdmin = false;
+            SetJoiningGroup(false);
+            Open();
+        }
+    }
+
+    public void Invite()
+    {
+        if (inGroup)
+        {
+            Close();
+            SetInviting(false);
+            Open();
+        }
+    }
+
+    public void SetJoiningGroup(bool joining)
+    {
+        isJoiningGroup = joining;
+    }
+
+    public void SetInviting(bool inviting)
+    {
+        isInviting = inviting;
     }
 }

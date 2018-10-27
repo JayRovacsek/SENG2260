@@ -18,7 +18,7 @@ public class WearableHoloLens : MonoBehaviour
     private void OnMouseDown()
     {
         menu.WearingHoloLens = true;
-        menu.SetActive(true);
+        menu.SetActive(false);
         Object.Destroy(gameObject);
     }
 

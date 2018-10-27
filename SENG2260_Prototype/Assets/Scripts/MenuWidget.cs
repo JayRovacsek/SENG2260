@@ -63,6 +63,11 @@ public class MenuWidget : MonoBehaviour
         SetActive(false);
     }
 
+    public void CloseWithoutParent()
+    {
+        SetActive(false);
+    }
+
     public bool IsActive()
     {
         return GetWidget().gameObject.activeSelf;
@@ -81,7 +86,7 @@ public class MenuWidget : MonoBehaviour
     public void Reorient()
     {
         // Reorient the menu to face the main camera
-        GetWidget().gameObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 2;
+        GetWidget().gameObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
         GetWidget().gameObject.transform.LookAt(Camera.main.transform);
         GetWidget().gameObject.transform.Rotate(Quaternion.AngleAxis(0, new Vector3(0, 0, 1)).eulerAngles);
         GetWidget().gameObject.transform.Rotate(Quaternion.AngleAxis(180, new Vector3(0, 1, 0)).eulerAngles);

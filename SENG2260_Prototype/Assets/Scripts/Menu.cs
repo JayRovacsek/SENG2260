@@ -9,14 +9,15 @@ public class Menu : MonoBehaviour
 
     // Use this for initialization
     void Start () {
+        WearingHoloLens = false;
         if (!WearingHoloLens)
         {
-            gameObject.SetActive(false);
             var widgets = gameObject.GetComponentsInChildren<MenuWidget>();
             foreach (var widget in widgets)
             {
                 widget.Close();
             }
+            gameObject.SetActive(false);
         }
     }
 
@@ -47,5 +48,5 @@ public class Menu : MonoBehaviour
     //    }
     //}
     //    Transform.LookAt(anchor.transform);
-    }   
+    }
 }

@@ -86,6 +86,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // Toggle the visibility of the main menu
             if (Input.GetKeyDown(KeyCode.E))
             {
+                var root = m_menu.transform.root.GetComponent<Menu>();
+                if (root != null)
+                {
+                    root.SetActive(true);
+                }
+
                 var active = m_menu.IsActive();
                 var widgets = m_menu.transform.root.GetComponentsInChildren<MenuWidget>();
                 foreach (var widget in widgets)
