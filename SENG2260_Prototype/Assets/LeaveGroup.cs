@@ -1,24 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-[RequireComponent(typeof(Menu))]
-public class WearableHoloLens : MonoBehaviour
+public class LeaveGroup : MonoBehaviour
 {
     [SerializeField]
-    private Menu menu;
+    GroupMenuWidget widget;
 
     // Start is called before the first frame update
     void Start()
     {
         
-    }
-
-    private void OnMouseDown()
-    {
-        menu.WearingHoloLens = true;
-        DestroyObject(gameObject);
     }
 
     // Update is called once per frame

@@ -30,16 +30,6 @@ public class Menu : MonoBehaviour
         return gameObject.activeSelf;
     }
 
-    public void SetActive(bool active)
-    {
-        gameObject.SetActive(active && WearingHoloLens);
-    }
-
-    public bool IsActive()
-    {
-        return gameObject.activeSelf;
-    }
-
     private void PlayerIsFrozen(bool status)
     {
         return;

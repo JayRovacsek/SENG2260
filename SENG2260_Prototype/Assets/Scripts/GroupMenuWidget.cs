@@ -30,4 +30,33 @@ public class GroupMenuWidget : MenuWidget
             return noGroupWidget;
         }
     }
+
+    public void DisbandGroup()
+    {
+        if (isAdmin)
+        {
+            LeaveGroup();
+        }
+    }
+
+    public void LeaveGroup()
+    {
+        if (inGroup)
+        {
+            Close();
+            inGroup = false;
+            isAdmin = false;
+        }
+    }   
+
+    public void CreateGroup()
+    {
+        if (!inGroup)
+        {
+            Close();
+            inGroup = true;
+            isAdmin = true;
+            Open();
+        }
+    }
 }
