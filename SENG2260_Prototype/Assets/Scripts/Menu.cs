@@ -36,28 +36,24 @@ public class Menu : MonoBehaviour
             // Scalar * direction vector + origin
             Transform.position = (minDistance * directionVector) + Camera.main.transform.position;
         }
-<<<<<<< HEAD
     }
 
     private void PlayerIsFrozen(bool status)
     {
-        Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.m_cursorIsLocked = !status;
+        return;
+    //    FirstPersonController FirstPersonController = gameObject.GetComponent<FirstPersonController>().m_MouseLook.m_cursorIsLocked = !status;
 
-        if (status)
-        {
-            FirstPersonController.m_WalkSpeed = 0;
-            FirstPersonController.m_RunSpeed = 0;
-        }
-        else
-        {
-            FirstPersonController.m_WalkSpeed = 5;
-            FirstPersonController.m_RunSpeed = 10;
-        }
-    }
-
-
-=======
-        Transform.LookAt(anchor.transform);
+    //    if (status)
+    //    {
+    //        FirstPersonController.m_WalkSpeed = 0;
+    //        FirstPersonController.m_RunSpeed = 0;
+    //    }
+    //    else
+    //    {
+    //        FirstPersonController.m_WalkSpeed = 5;
+    //        FirstPersonController.m_RunSpeed = 10;
+    //    }
+    //}
+    //    Transform.LookAt(anchor.transform);
     }   
->>>>>>> 22ee2f8449800bad111723cbba66f7cefba6cfc4
 }
