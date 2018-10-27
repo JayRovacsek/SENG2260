@@ -191,7 +191,7 @@ public class InstantGui : MonoBehaviour
 		
 		//getting game view size
 		#if UNITY_EDITOR
-		/*
+		
 		if (!gameView)
 		{
 			System.Type type = System.Type.GetType("UnityEditor.GameView,UnityEditor");
@@ -200,7 +200,7 @@ public class InstantGui : MonoBehaviour
 		}
 		width = (int)gameView.position.width;
 		height = (int)gameView.position.height-16;
-		*/
+		
 		
 		//It is not possible to use Screen.height from an OnInspectorGUI (returns inspector height)
 		string[] res = UnityEditor.UnityStats.screenRes.Split('x');

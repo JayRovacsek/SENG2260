@@ -27,7 +27,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
-        [SerializeField] private Menu m_menu;
+        [SerializeField] public MenuWidget m_menu;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -83,14 +83,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
-            // Toggle the visibility of the menu
+            // Toggle the visibility of the main menu
             if (Input.GetKeyDown(KeyCode.E))
             {
-                // Reorient the menu to face the main camera
-                m_menu.gameObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 3;
-                m_menu.gameObject.transform.LookAt(Camera.main.transform);
-                m_menu.gameObject.transform.Rotate(Quaternion.AngleAxis(0, new Vector3(0, 0, 1)).eulerAngles);
-                m_menu.SetActive(!m_menu.IsActive());
+                var active = m_menu.IsActive();
+                var widgets = m_menu.transform.root.GetComponentsInChildren<MenuWidget>();
+                foreach (var widget in widgets)
+                {
+                    widget.Close();
+                }
+                m_menu.SetActive(!active);
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                m_MouseLook.m_cursorIsLocked = !m_MouseLook.m_cursorIsLocked;
             }
         }
 
