@@ -5,6 +5,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour {
 
     public GameObject PlayerMenu { get; set; }
+    public IEnumerable<GameObject> PlayerSubmenu { get; set; }
     public GameObject Player { get; set; }
     public UnityStandardAssets.Characters.FirstPerson.FirstPersonController FirstPersonController { get; set; }
     public Camera Camera { get; set; }
@@ -13,10 +14,15 @@ public class Menu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         PlayerMenu = GameObject.FindWithTag("Menu");
+        PlayerSubmenu = GameObject.FindGameObjectsWithTag("Submenu");
         Player = GameObject.FindWithTag("Player");
         FirstPersonController = Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
         Camera = Player.GetComponent<Camera>();
         PlayerMenu.SetActive(false);
+        foreach (var Submenu in PlayerSubmenu)
+        {
+            Submenu.SetActive(false);
+        }
         FreezeCamera = false;
     }
 	
@@ -26,6 +32,10 @@ public class Menu : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.B))
         {
             PlayerMenu.SetActive(!PlayerMenu.activeSelf);
+            foreach (var Submenu in PlayerSubmenu)
+            {
+                Submenu.SetActive(false);
+            }
         }
 
         if (PlayerMenu.activeSelf)

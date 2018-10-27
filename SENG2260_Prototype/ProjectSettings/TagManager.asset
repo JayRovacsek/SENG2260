@@ -8,6 +8,7 @@ TagManager:
   - Menu
   - Video
   - Audio
+  - Submenu
   layers:
   - Default
   - TransparentFX
