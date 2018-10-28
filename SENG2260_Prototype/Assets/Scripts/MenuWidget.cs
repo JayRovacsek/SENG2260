@@ -25,10 +25,6 @@ public class MenuWidget : MonoBehaviour
                 Close();
             }
         }
-        else
-        {
-            Open();
-        }
     }
 
     public void Toggle()
