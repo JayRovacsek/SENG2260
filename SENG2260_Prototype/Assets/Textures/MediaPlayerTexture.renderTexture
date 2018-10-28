@@ -3,8 +3,9 @@
 --- !u!84 &8400000
 RenderTexture:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: MediaPlayerTexture
   m_ImageContentsHash:
     serializedVersion: 2
@@ -18,7 +19,7 @@ RenderTexture:
   m_ColorFormat: 0
   m_MipMap: 1
   m_GenerateMips: 1
-  m_SRGB: 0
+  m_SRGB: 1
   m_UseDynamicScale: 1
   m_BindMS: 0
   m_TextureSettings:
