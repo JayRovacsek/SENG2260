@@ -17,14 +17,6 @@ public class MenuWidget : MonoBehaviour
         {
             anchor = Camera.main;
         }
-
-        if (parent != null)
-        {
-            if (parent.IsActive())
-            {
-                Close();
-            }
-        }
     }
 
     public void Toggle()
@@ -42,11 +34,12 @@ public class MenuWidget : MonoBehaviour
     public void Open()
     {
         Reorient();
+        Reorient();
         SetActive(true);
         // This must be done after in case the caller is in the parent's scene graph
         if (parent != null)
         {
-            parent.Close();
+            //parent.Close();
         }
     }
 

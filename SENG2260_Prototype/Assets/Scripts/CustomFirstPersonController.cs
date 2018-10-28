@@ -90,15 +90,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (root != null)
                 {
                     root.SetActive(true);
+                    root.SetActive(true);
                 }
 
                 var active = m_menu.IsActive();
-                var widgets = m_menu.transform.root.GetComponentsInChildren<MenuWidget>();
-                foreach (var widget in widgets)
-                {
-                    widget.Close();
-                }
                 m_menu.SetActive(!active);
+                m_menu.Reorient();
             }
 
             if (Input.GetMouseButtonDown(1))
