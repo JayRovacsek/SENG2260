@@ -14,31 +14,32 @@ public class ToggleButtonOnClick : MonoBehaviour
     private Color tint;
     [SerializeField]
     private bool usesSprite;
+    private Sprite originalSprite;
     private Color originalColour;
+    private bool IsOn { get; set; }
 
-    private void Awake()
+    private void Start()
     {
+        image = gameObject.GetComponent<Image>();
+        originalSprite = image.sprite;
         originalColour = image.color;
     }
 
     // Start is called before the first frame update
     public void OnClick()
     {
+        IsOn = !IsOn;
+    }
+
+    public void FixedUpdate()
+    {
         if (usesSprite)
         {
-            image.overrideSprite = (image.overrideSprite == null)
-               ? sprite : null;
+            image.sprite = (IsOn) ? sprite : originalSprite;
         }
         else
         {
-            image.color = (image.color == tint) 
-                ? originalColour : tint;
+            image.color = (IsOn) ? originalColour : tint;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

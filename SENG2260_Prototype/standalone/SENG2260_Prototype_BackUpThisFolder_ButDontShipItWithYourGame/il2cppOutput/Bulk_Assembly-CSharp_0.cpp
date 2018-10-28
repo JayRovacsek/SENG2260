@@ -1307,7 +1307,7 @@ extern const uint32_t ScreenSpaceReflectionComponent_get_active_mFC55FB8582274C4
 extern const uint32_t Screen_CheckProximity_m54337C38AED7D821EEED93EA07BB81EB11CB7B46_MetadataUsageId;
 extern const uint32_t Screen_CheckVisibility_mCEE604792424C54505F2706B9E41171CB67B03F5_MetadataUsageId;
 extern const uint32_t Screen_Start_m2E3CAD6514AEF47B6A5CF116D2A0BA5B36972C67_MetadataUsageId;
-extern const uint32_t ToggleButtonOnClick_OnClick_mE0660CC687D2D6FB316CED1C5A5383D7B989133A_MetadataUsageId;
+extern const uint32_t ToggleButtonOnClick_Start_m7E6E5A4A8105CAB75BB53FDA2EC951E6F49ECA9C_MetadataUsageId;
 extern const uint32_t Uniforms__cctor_m069A73DA5C8F68B555E3645A9F6BF31A5D6B2D34_MetadataUsageId;
 extern const uint32_t Uniforms__cctor_m0FC0525C7C2EF85D4768D06061D7F1791584643D_MetadataUsageId;
 extern const uint32_t Uniforms__cctor_m1ED7D28808978AE0097D14356061D7EA66BA909A_MetadataUsageId;
@@ -17044,8 +17044,12 @@ public:
 	Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  ___tint_6;
 	// System.Boolean ToggleButtonOnClick::usesSprite
 	bool ___usesSprite_7;
+	// UnityEngine.Sprite ToggleButtonOnClick::originalSprite
+	Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * ___originalSprite_8;
 	// UnityEngine.Color ToggleButtonOnClick::originalColour
-	Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  ___originalColour_8;
+	Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  ___originalColour_9;
+	// System.Boolean ToggleButtonOnClick::<IsOn>k__BackingField
+	bool ___U3CIsOnU3Ek__BackingField_10;
 
 public:
 	inline static int32_t get_offset_of_image_4() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___image_4)); }
@@ -17082,12 +17086,29 @@ public:
 		___usesSprite_7 = value;
 	}
 
-	inline static int32_t get_offset_of_originalColour_8() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___originalColour_8)); }
-	inline Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  get_originalColour_8() const { return ___originalColour_8; }
-	inline Color_t119BCA590009762C7223FDD3AF9706653AC84ED2 * get_address_of_originalColour_8() { return &___originalColour_8; }
-	inline void set_originalColour_8(Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  value)
+	inline static int32_t get_offset_of_originalSprite_8() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___originalSprite_8)); }
+	inline Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * get_originalSprite_8() const { return ___originalSprite_8; }
+	inline Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 ** get_address_of_originalSprite_8() { return &___originalSprite_8; }
+	inline void set_originalSprite_8(Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * value)
 	{
-		___originalColour_8 = value;
+		___originalSprite_8 = value;
+		Il2CppCodeGenWriteBarrier((&___originalSprite_8), value);
+	}
+
+	inline static int32_t get_offset_of_originalColour_9() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___originalColour_9)); }
+	inline Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  get_originalColour_9() const { return ___originalColour_9; }
+	inline Color_t119BCA590009762C7223FDD3AF9706653AC84ED2 * get_address_of_originalColour_9() { return &___originalColour_9; }
+	inline void set_originalColour_9(Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  value)
+	{
+		___originalColour_9 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CIsOnU3Ek__BackingField_10() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___U3CIsOnU3Ek__BackingField_10)); }
+	inline bool get_U3CIsOnU3Ek__BackingField_10() const { return ___U3CIsOnU3Ek__BackingField_10; }
+	inline bool* get_address_of_U3CIsOnU3Ek__BackingField_10() { return &___U3CIsOnU3Ek__BackingField_10; }
+	inline void set_U3CIsOnU3Ek__BackingField_10(bool value)
+	{
+		___U3CIsOnU3Ek__BackingField_10 = value;
 	}
 };
 
@@ -20129,6 +20150,8 @@ inline bool ExecuteEvents_Execute_TisIPointerExitHandler_t5D65A773A15D990BC231F7
 extern "C" IL2CPP_METHOD_ATTR void GroupMenuWidget_LeaveGroup_m22DAE9712219F7A134ECA84AE0350A593205B0D4 (GroupMenuWidget_tEE895C565258F5EE4BA441657CBB219ED32FAB9D * __this, const RuntimeMethod* method);
 // System.Void MenuWidget::Close()
 extern "C" IL2CPP_METHOD_ATTR void MenuWidget_Close_m7B53A36179ECADE29A01F2AC493B191EBB6CEFBB (MenuWidget_tC52950200819C6E82A0B7BE21D07A810CF568401 * __this, const RuntimeMethod* method);
+// System.Void MenuWidget::CloseWithoutParent()
+extern "C" IL2CPP_METHOD_ATTR void MenuWidget_CloseWithoutParent_m00DEC5D773ED82940D81006D0E1789423C5A0880 (MenuWidget_tC52950200819C6E82A0B7BE21D07A810CF568401 * __this, const RuntimeMethod* method);
 // System.Void GroupMenuWidget::SetJoiningGroup(System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void GroupMenuWidget_SetJoiningGroup_m5CDB31517E2105E098E66AAB5C2201CE05D3E93F (GroupMenuWidget_tEE895C565258F5EE4BA441657CBB219ED32FAB9D * __this, bool ___joining0, const RuntimeMethod* method);
 // System.Void MenuWidget::Open()
@@ -20397,10 +20420,12 @@ inline Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * Component_GetCompone
 extern "C" IL2CPP_METHOD_ATTR bool Renderer_get_isVisible_mE952393384B74AD7FE85354406B19F1157CB4EC0 (Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * __this, const RuntimeMethod* method);
 // UnityEngine.GameObject Screen::get_Menu()
 extern "C" IL2CPP_METHOD_ATTR GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * Screen_get_Menu_m0F33DC0EF32479F698CC1B30A8D34F3242968BF1 (Screen_t48FC30A4849D6878A3B48D20C57F0156FA0D5049 * __this, const RuntimeMethod* method);
-// UnityEngine.Sprite UnityEngine.UI.Image::get_overrideSprite()
-extern "C" IL2CPP_METHOD_ATTR Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * Image_get_overrideSprite_mCBFEB26E00A6EEDFBFE10CA12875BB952DD62C8D (Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * __this, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Color::op_Equality(UnityEngine.Color,UnityEngine.Color)
-extern "C" IL2CPP_METHOD_ATTR bool Color_op_Equality_m71B1A2F64AD6228F10E20149EF6440460D2C748E (Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  p0, Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  p1, const RuntimeMethod* method);
+// UnityEngine.Sprite UnityEngine.UI.Image::get_sprite()
+extern "C" IL2CPP_METHOD_ATTR Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * Image_get_sprite_mE7474EFC8201ADE07965629C74CAA420DAEAA752 (Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * __this, const RuntimeMethod* method);
+// System.Boolean ToggleButtonOnClick::get_IsOn()
+extern "C" IL2CPP_METHOD_ATTR bool ToggleButtonOnClick_get_IsOn_m7CA4460EACA92B2F1A963078F407C6B9A2AB2D18 (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, const RuntimeMethod* method);
+// System.Void ToggleButtonOnClick::set_IsOn(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_set_IsOn_m9E2F6A8AC02D1B9D5A48689A6BA426B3418CA114 (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Boolean UnityEngine.PostProcessing.PostProcessingContext::get_isGBufferAvailable()
 extern "C" IL2CPP_METHOD_ATTR bool PostProcessingContext_get_isGBufferAvailable_m7AF0184F09D7CFDDAE2538E426C691700D92BC08 (PostProcessingContext_tD8A98E2DAB2DEE2AFC721C88C293E14FE67A00E7 * __this, const RuntimeMethod* method);
 // T UnityEngine.PostProcessing.PostProcessingComponent`1<UnityEngine.PostProcessing.AmbientOcclusionModel>::get_model()
@@ -23658,7 +23683,7 @@ extern "C" IL2CPP_METHOD_ATTR void GroupMenuWidget_CreateGroup_m199B61537512DF3E
 		}
 	}
 	{
-		MenuWidget_Close_m7B53A36179ECADE29A01F2AC493B191EBB6CEFBB(__this, /*hidden argument*/NULL);
+		MenuWidget_CloseWithoutParent_m00DEC5D773ED82940D81006D0E1789423C5A0880(__this, /*hidden argument*/NULL);
 		__this->set_inGroup_6((bool)1);
 		__this->set_isAdmin_7((bool)1);
 		GroupMenuWidget_SetJoiningGroup_m5CDB31517E2105E098E66AAB5C2201CE05D3E93F(__this, (bool)0, /*hidden argument*/NULL);
@@ -23681,7 +23706,7 @@ extern "C" IL2CPP_METHOD_ATTR void GroupMenuWidget_JoinGroup_mF95FBDFCB4B473CC3B
 		}
 	}
 	{
-		MenuWidget_Close_m7B53A36179ECADE29A01F2AC493B191EBB6CEFBB(__this, /*hidden argument*/NULL);
+		MenuWidget_CloseWithoutParent_m00DEC5D773ED82940D81006D0E1789423C5A0880(__this, /*hidden argument*/NULL);
 		__this->set_inGroup_6((bool)1);
 		__this->set_isAdmin_7((bool)0);
 		GroupMenuWidget_SetJoiningGroup_m5CDB31517E2105E098E66AAB5C2201CE05D3E93F(__this, (bool)0, /*hidden argument*/NULL);
@@ -23704,7 +23729,7 @@ extern "C" IL2CPP_METHOD_ATTR void GroupMenuWidget_Invite_mF373D2449186AD093C593
 		}
 	}
 	{
-		MenuWidget_Close_m7B53A36179ECADE29A01F2AC493B191EBB6CEFBB(__this, /*hidden argument*/NULL);
+		MenuWidget_CloseWithoutParent_m00DEC5D773ED82940D81006D0E1789423C5A0880(__this, /*hidden argument*/NULL);
 		GroupMenuWidget_SetInviting_m8D2EB68132BA534ED778763854A02ABA1DD24ACB(__this, (bool)0, /*hidden argument*/NULL);
 		MenuWidget_Open_mA6BEDB3A202463DD7698BEE249976098B18A8132(__this, /*hidden argument*/NULL);
 	}
@@ -26596,26 +26621,51 @@ extern "C" IL2CPP_METHOD_ATTR void Screen__ctor_mBEF158A8C75E13BE41BEC92652349FE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void ToggleButtonOnClick::Awake()
-extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_Awake_m30DEFED38D8910A354382747B2A0420C86594646 (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, const RuntimeMethod* method)
+// System.Boolean ToggleButtonOnClick::get_IsOn()
+extern "C" IL2CPP_METHOD_ATTR bool ToggleButtonOnClick_get_IsOn_m7CA4460EACA92B2F1A963078F407C6B9A2AB2D18 (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, const RuntimeMethod* method)
 {
 	{
-		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_0 = __this->get_image_4();
+		bool L_0 = __this->get_U3CIsOnU3Ek__BackingField_10();
+		return L_0;
+	}
+}
+// System.Void ToggleButtonOnClick::set_IsOn(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_set_IsOn_m9E2F6A8AC02D1B9D5A48689A6BA426B3418CA114 (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		bool L_0 = ___value0;
+		__this->set_U3CIsOnU3Ek__BackingField_10(L_0);
+		return;
+	}
+}
+// System.Void ToggleButtonOnClick::Start()
+extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_Start_m7E6E5A4A8105CAB75BB53FDA2EC951E6F49ECA9C (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (ToggleButtonOnClick_Start_m7E6E5A4A8105CAB75BB53FDA2EC951E6F49ECA9C_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_0 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(__this, /*hidden argument*/NULL);
 		NullCheck(L_0);
-		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_1 = VirtFuncInvoker0< Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  >::Invoke(22 /* UnityEngine.Color UnityEngine.UI.Graphic::get_color() */, L_0);
-		__this->set_originalColour_8(L_1);
+		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_1 = GameObject_GetComponent_TisImage_t18FED07D8646917E1C563745518CF3DD57FF0B3E_m9008044B066CF5830B44DEB0C6CD94872D501A75(L_0, /*hidden argument*/GameObject_GetComponent_TisImage_t18FED07D8646917E1C563745518CF3DD57FF0B3E_m9008044B066CF5830B44DEB0C6CD94872D501A75_RuntimeMethod_var);
+		__this->set_image_4(L_1);
+		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_2 = __this->get_image_4();
+		NullCheck(L_2);
+		Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * L_3 = Image_get_sprite_mE7474EFC8201ADE07965629C74CAA420DAEAA752(L_2, /*hidden argument*/NULL);
+		__this->set_originalSprite_8(L_3);
+		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_4 = __this->get_image_4();
+		NullCheck(L_4);
+		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_5 = VirtFuncInvoker0< Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  >::Invoke(22 /* UnityEngine.Color UnityEngine.UI.Graphic::get_color() */, L_4);
+		__this->set_originalColour_9(L_5);
 		return;
 	}
 }
 // System.Void ToggleButtonOnClick::OnClick()
 extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_OnClick_mE0660CC687D2D6FB316CED1C5A5383D7B989133A (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (ToggleButtonOnClick_OnClick_mE0660CC687D2D6FB316CED1C5A5383D7B989133A_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
 	Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * G_B3_0 = NULL;
 	Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * G_B2_0 = NULL;
 	Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * G_B4_0 = NULL;
@@ -26629,83 +26679,75 @@ extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_OnClick_mE0660CC687D2D6FB
 		bool L_0 = __this->get_usesSprite_7();
 		if (!L_0)
 		{
-			goto IL_0030;
+			goto IL_002b;
 		}
 	}
 	{
 		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_1 = __this->get_image_4();
-		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_2 = __this->get_image_4();
-		NullCheck(L_2);
-		Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * L_3 = Image_get_overrideSprite_mCBFEB26E00A6EEDFBFE10CA12875BB952DD62C8D(L_2, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
-		bool L_4 = Object_op_Equality_mBC2401774F3BE33E8CF6F0A8148E66C95D6CFF1C(L_3, (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 *)NULL, /*hidden argument*/NULL);
+		bool L_2 = ToggleButtonOnClick_get_IsOn_m7CA4460EACA92B2F1A963078F407C6B9A2AB2D18(__this, /*hidden argument*/NULL);
 		G_B2_0 = L_1;
-		if (L_4)
+		if (L_2)
 		{
 			G_B3_0 = L_1;
-			goto IL_0024;
+			goto IL_001e;
 		}
 	}
 	{
-		G_B4_0 = ((Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 *)(NULL));
+		Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * L_3 = __this->get_originalSprite_8();
+		G_B4_0 = L_3;
 		G_B4_1 = G_B2_0;
-		goto IL_002a;
+		goto IL_0024;
+	}
+
+IL_001e:
+	{
+		Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * L_4 = __this->get_sprite_5();
+		G_B4_0 = L_4;
+		G_B4_1 = G_B3_0;
 	}
 
 IL_0024:
 	{
-		Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * L_5 = __this->get_sprite_5();
-		G_B4_0 = L_5;
-		G_B4_1 = G_B3_0;
-	}
-
-IL_002a:
-	{
 		NullCheck(G_B4_1);
-		Image_set_overrideSprite_m768A8407C3F0C85D18AED6CC01D000D90630DB66(G_B4_1, G_B4_0, /*hidden argument*/NULL);
-		return;
+		Image_set_sprite_m51F205B44430C8FF8BB0AF1BA7D825978EE663F9(G_B4_1, G_B4_0, /*hidden argument*/NULL);
+		goto IL_004c;
 	}
 
-IL_0030:
+IL_002b:
 	{
-		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_6 = __this->get_image_4();
-		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_7 = __this->get_image_4();
-		NullCheck(L_7);
-		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_8 = VirtFuncInvoker0< Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  >::Invoke(22 /* UnityEngine.Color UnityEngine.UI.Graphic::get_color() */, L_7);
-		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_9 = __this->get_tint_6();
-		bool L_10 = Color_op_Equality_m71B1A2F64AD6228F10E20149EF6440460D2C748E(L_8, L_9, /*hidden argument*/NULL);
-		G_B6_0 = L_6;
-		if (L_10)
+		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_5 = __this->get_image_4();
+		bool L_6 = ToggleButtonOnClick_get_IsOn_m7CA4460EACA92B2F1A963078F407C6B9A2AB2D18(__this, /*hidden argument*/NULL);
+		G_B6_0 = L_5;
+		if (L_6)
 		{
-			G_B7_0 = L_6;
-			goto IL_0056;
+			G_B7_0 = L_5;
+			goto IL_0041;
 		}
 	}
 	{
-		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_11 = __this->get_tint_6();
-		G_B8_0 = L_11;
+		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_7 = __this->get_tint_6();
+		G_B8_0 = L_7;
 		G_B8_1 = G_B6_0;
-		goto IL_005c;
+		goto IL_0047;
 	}
 
-IL_0056:
+IL_0041:
 	{
-		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_12 = __this->get_originalColour_8();
-		G_B8_0 = L_12;
+		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_8 = __this->get_originalColour_9();
+		G_B8_0 = L_8;
 		G_B8_1 = G_B7_0;
 	}
 
-IL_005c:
+IL_0047:
 	{
 		NullCheck(G_B8_1);
 		VirtActionInvoker1< Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, G_B8_1, G_B8_0);
-		return;
 	}
-}
-// System.Void ToggleButtonOnClick::Update()
-extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_Update_m3EAE3A8D247A394F5F25F16CE21BB151995085FC (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, const RuntimeMethod* method)
-{
+
+IL_004c:
 	{
+		bool L_9 = ToggleButtonOnClick_get_IsOn_m7CA4460EACA92B2F1A963078F407C6B9A2AB2D18(__this, /*hidden argument*/NULL);
+		ToggleButtonOnClick_set_IsOn_m9E2F6A8AC02D1B9D5A48689A6BA426B3418CA114(__this, (bool)((((int32_t)L_9) == ((int32_t)0))? 1 : 0), /*hidden argument*/NULL);
 		return;
 	}
 }

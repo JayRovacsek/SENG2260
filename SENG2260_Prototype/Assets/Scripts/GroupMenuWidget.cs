@@ -42,7 +42,7 @@ public class GroupMenuWidget : MenuWidget
             LeaveGroup();
         }
     }
-
+        
     public void LeaveGroup()
     {
         if (inGroup)

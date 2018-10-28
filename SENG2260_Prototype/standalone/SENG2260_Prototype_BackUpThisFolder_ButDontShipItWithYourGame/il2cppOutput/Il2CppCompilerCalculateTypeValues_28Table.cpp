@@ -7279,8 +7279,12 @@ public:
 	Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  ___tint_6;
 	// System.Boolean ToggleButtonOnClick::usesSprite
 	bool ___usesSprite_7;
+	// UnityEngine.Sprite ToggleButtonOnClick::originalSprite
+	Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * ___originalSprite_8;
 	// UnityEngine.Color ToggleButtonOnClick::originalColour
-	Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  ___originalColour_8;
+	Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  ___originalColour_9;
+	// System.Boolean ToggleButtonOnClick::<IsOn>k__BackingField
+	bool ___U3CIsOnU3Ek__BackingField_10;
 
 public:
 	inline static int32_t get_offset_of_image_4() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___image_4)); }
@@ -7317,12 +7321,29 @@ public:
 		___usesSprite_7 = value;
 	}
 
-	inline static int32_t get_offset_of_originalColour_8() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___originalColour_8)); }
-	inline Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  get_originalColour_8() const { return ___originalColour_8; }
-	inline Color_t119BCA590009762C7223FDD3AF9706653AC84ED2 * get_address_of_originalColour_8() { return &___originalColour_8; }
-	inline void set_originalColour_8(Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  value)
+	inline static int32_t get_offset_of_originalSprite_8() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___originalSprite_8)); }
+	inline Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * get_originalSprite_8() const { return ___originalSprite_8; }
+	inline Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 ** get_address_of_originalSprite_8() { return &___originalSprite_8; }
+	inline void set_originalSprite_8(Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * value)
 	{
-		___originalColour_8 = value;
+		___originalSprite_8 = value;
+		Il2CppCodeGenWriteBarrier((&___originalSprite_8), value);
+	}
+
+	inline static int32_t get_offset_of_originalColour_9() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___originalColour_9)); }
+	inline Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  get_originalColour_9() const { return ___originalColour_9; }
+	inline Color_t119BCA590009762C7223FDD3AF9706653AC84ED2 * get_address_of_originalColour_9() { return &___originalColour_9; }
+	inline void set_originalColour_9(Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  value)
+	{
+		___originalColour_9 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CIsOnU3Ek__BackingField_10() { return static_cast<int32_t>(offsetof(ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277, ___U3CIsOnU3Ek__BackingField_10)); }
+	inline bool get_U3CIsOnU3Ek__BackingField_10() const { return ___U3CIsOnU3Ek__BackingField_10; }
+	inline bool* get_address_of_U3CIsOnU3Ek__BackingField_10() { return &___U3CIsOnU3Ek__BackingField_10; }
+	inline void set_U3CIsOnU3Ek__BackingField_10(bool value)
+	{
+		___U3CIsOnU3Ek__BackingField_10 = value;
 	}
 };
 
@@ -8444,13 +8465,15 @@ extern const int32_t g_FieldOffsetTable2829[8] =
 	Screen_t48FC30A4849D6878A3B48D20C57F0156FA0D5049::get_offset_of_U3CAudioU3Ek__BackingField_11(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2830 = { sizeof (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2830[5] = 
+extern const int32_t g_FieldOffsetTable2830[7] = 
 {
 	ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277::get_offset_of_image_4(),
 	ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277::get_offset_of_sprite_5(),
 	ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277::get_offset_of_tint_6(),
 	ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277::get_offset_of_usesSprite_7(),
-	ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277::get_offset_of_originalColour_8(),
+	ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277::get_offset_of_originalSprite_8(),
+	ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277::get_offset_of_originalColour_9(),
+	ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277::get_offset_of_U3CIsOnU3Ek__BackingField_10(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2831 = { sizeof (WearableHoloLens_t8499F067E47D49F8A9E32CAF8A5B6292E4A7CEBB), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable2831[1] = 
