@@ -57,7 +57,7 @@ public class GroupMenuWidget : MenuWidget
     {
         if (!inGroup)
         {
-            Close();
+            CloseWithoutParent();
             inGroup = true;
             isAdmin = true;
             SetJoiningGroup(false);
@@ -69,7 +69,7 @@ public class GroupMenuWidget : MenuWidget
     {
         if (!inGroup)
         {
-            Close();
+            CloseWithoutParent();
             inGroup = true;
             isAdmin = false;
             SetJoiningGroup(false);
@@ -81,7 +81,7 @@ public class GroupMenuWidget : MenuWidget
     {
         if (inGroup)
         {
-            Close();
+            CloseWithoutParent();
             SetInviting(false);
             Open();
         }

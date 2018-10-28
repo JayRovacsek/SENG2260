@@ -1563,6 +1563,15 @@ extern "C" IL2CPP_METHOD_ATTR void VideoPlayer_Pause_m62EE5660CFA287D78BB3FE815C
 	_il2cpp_icall_func = (VideoPlayer_Pause_m62EE5660CFA287D78BB3FE815CA5649242509B93_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Video.VideoPlayer::Pause()");
 	_il2cpp_icall_func(__this);
 }
+// System.Void UnityEngine.Video.VideoPlayer::Stop()
+extern "C" IL2CPP_METHOD_ATTR void VideoPlayer_Stop_mBEDCB786A42A95603F9D8B7763DEC3BD97565852 (VideoPlayer_tFC1C27AF83D59A5213B2AC561B43FD7E19FE02F2 * __this, const RuntimeMethod* method)
+{
+	typedef void (*VideoPlayer_Stop_mBEDCB786A42A95603F9D8B7763DEC3BD97565852_ftn) (VideoPlayer_tFC1C27AF83D59A5213B2AC561B43FD7E19FE02F2 *);
+	static VideoPlayer_Stop_mBEDCB786A42A95603F9D8B7763DEC3BD97565852_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (VideoPlayer_Stop_mBEDCB786A42A95603F9D8B7763DEC3BD97565852_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Video.VideoPlayer::Stop()");
+	_il2cpp_icall_func(__this);
+}
 // System.Boolean UnityEngine.Video.VideoPlayer::get_isPlaying()
 extern "C" IL2CPP_METHOD_ATTR bool VideoPlayer_get_isPlaying_mC7CFE17762C14F2AFB1D73500317B9D25A7395DF (VideoPlayer_tFC1C27AF83D59A5213B2AC561B43FD7E19FE02F2 * __this, const RuntimeMethod* method)
 {
