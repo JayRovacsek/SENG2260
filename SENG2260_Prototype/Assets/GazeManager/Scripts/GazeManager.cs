@@ -47,7 +47,7 @@ public class GazeManager : MonoBehaviour {
 
             if (hitTarget != null)
             {
-                Debug.Log("Hit Target: " + hitTarget.name);
+                //Debug.Log("Hit Target: " + hitTarget.name);
 
                 if (hitTarget != Target)
                 {
@@ -59,7 +59,7 @@ public class GazeManager : MonoBehaviour {
                     Target = hitTarget;
                 }
 
-                Debug.Log("Current Target: " + Target.name);
+                //Debug.Log("Current Target: " + Target.name);
 
                 if (Input.GetMouseButtonDown(PRIMARY_MOUSE_BUTTON))
                 {
