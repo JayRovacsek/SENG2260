@@ -26666,6 +26666,15 @@ extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_Start_m7E6E5A4A8105CAB75B
 // System.Void ToggleButtonOnClick::OnClick()
 extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_OnClick_mE0660CC687D2D6FB316CED1C5A5383D7B989133A (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, const RuntimeMethod* method)
 {
+	{
+		bool L_0 = ToggleButtonOnClick_get_IsOn_m7CA4460EACA92B2F1A963078F407C6B9A2AB2D18(__this, /*hidden argument*/NULL);
+		ToggleButtonOnClick_set_IsOn_m9E2F6A8AC02D1B9D5A48689A6BA426B3418CA114(__this, (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void ToggleButtonOnClick::FixedUpdate()
+extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_FixedUpdate_mFFAA02A2806E4001D14494FB8D86648D2F50FBFC (ToggleButtonOnClick_tBAE6AE7F5B53C1A0B8BE476BDD145EE95D449277 * __this, const RuntimeMethod* method)
+{
 	Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * G_B3_0 = NULL;
 	Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * G_B2_0 = NULL;
 	Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * G_B4_0 = NULL;
@@ -26679,7 +26688,7 @@ extern "C" IL2CPP_METHOD_ATTR void ToggleButtonOnClick_OnClick_mE0660CC687D2D6FB
 		bool L_0 = __this->get_usesSprite_7();
 		if (!L_0)
 		{
-			goto IL_002b;
+			goto IL_002a;
 		}
 	}
 	{
@@ -26710,10 +26719,10 @@ IL_0024:
 	{
 		NullCheck(G_B4_1);
 		Image_set_sprite_m51F205B44430C8FF8BB0AF1BA7D825978EE663F9(G_B4_1, G_B4_0, /*hidden argument*/NULL);
-		goto IL_004c;
+		return;
 	}
 
-IL_002b:
+IL_002a:
 	{
 		Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * L_5 = __this->get_image_4();
 		bool L_6 = ToggleButtonOnClick_get_IsOn_m7CA4460EACA92B2F1A963078F407C6B9A2AB2D18(__this, /*hidden argument*/NULL);
@@ -26721,33 +26730,27 @@ IL_002b:
 		if (L_6)
 		{
 			G_B7_0 = L_5;
-			goto IL_0041;
+			goto IL_0040;
 		}
 	}
 	{
 		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_7 = __this->get_tint_6();
 		G_B8_0 = L_7;
 		G_B8_1 = G_B6_0;
-		goto IL_0047;
+		goto IL_0046;
 	}
 
-IL_0041:
+IL_0040:
 	{
 		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_8 = __this->get_originalColour_9();
 		G_B8_0 = L_8;
 		G_B8_1 = G_B7_0;
 	}
 
-IL_0047:
+IL_0046:
 	{
 		NullCheck(G_B8_1);
 		VirtActionInvoker1< Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, G_B8_1, G_B8_0);
-	}
-
-IL_004c:
-	{
-		bool L_9 = ToggleButtonOnClick_get_IsOn_m7CA4460EACA92B2F1A963078F407C6B9A2AB2D18(__this, /*hidden argument*/NULL);
-		ToggleButtonOnClick_set_IsOn_m9E2F6A8AC02D1B9D5A48689A6BA426B3418CA114(__this, (bool)((((int32_t)L_9) == ((int32_t)0))? 1 : 0), /*hidden argument*/NULL);
 		return;
 	}
 }
